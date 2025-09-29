@@ -1,0 +1,2 @@
+# Geen extra requirements nodig voor basis (Python 3.10+ recommended)
+# Als je GUI wil verbeteren kun je libraries toevoegen.

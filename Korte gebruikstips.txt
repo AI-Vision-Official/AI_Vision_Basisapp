@@ -1,0 +1,8 @@
+Korte gebruikstips (zeer bondig)
+Nieuwe module maken: GUI → Module-generator → naam invullen → Maak module → Vernieuwen.
+
+Module schrijven: zorg voor MODULE_NAME = "Naam" (optioneel) en een def run(): als startpunt.
+
+Herladen: klik Vernieuwen (GUI) of in console kies Refresh.
+
+EXE maken: PyInstaller-commando zoals in README.

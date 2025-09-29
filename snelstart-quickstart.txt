@@ -1,0 +1,19 @@
+Snelstart / Quickstart
+======================
+
+1) Python 3.10+ installeren (Windows).
+2) Open terminal in projectmap.
+
+App starten:
+> python main.py
+Kies eerst taal (Nederlands of English), daarna Console of GUI.
+
+Nieuwe module maken:
+- GUI → Module-generator → naam invullen → Maak module → Vernieuwen
+- Of handmatig: voeg modules/<naam>.py met een run() functie toe.
+
+EXE bouwen:
+> pip install pyinstaller
+> pyinstaller --onefile --name=MijnBasisApp main.py
+
+Auteur: Auteur: Brigitte Schrijvers en ChatGPTv5

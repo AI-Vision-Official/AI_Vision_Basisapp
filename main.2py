@@ -1,0 +1,43 @@
+import sys
+import os
+from modules import voorbeeld
+from utils import file_tools
+
+APP_NAME = "MijnBasisApp"
+APP_VERSION = "1.0.0"
+AUTHOR = "Brigitte Schrijvers"
+
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def main_menu():
+    clear_console()
+    print(f"{APP_NAME} v{APP_VERSION} - door {AUTHOR}")
+    print("=" * 40)
+    print("1. Hallo Wereld (voorbeeld)")
+    print("2. Toon bestandslocatie")
+    print("3. Toon bestanden in huidige map")
+    print("4. Afsluiten")
+
+    keuze = input("\nMaak een keuze (1-4): ").strip()
+
+    if keuze == "1":
+        voorbeeld.hallo_wereld()
+    elif keuze == "2":
+        print("Dit programma draait vanaf:", os.path.abspath(sys.argv[0]))
+    elif keuze == "3":
+        bestanden = file_tools.list_files(".")
+        print("Bestanden in huidige map:")
+        for f in bestanden:
+            print(f" - {f}")
+    elif keuze == "4":
+        print("Tot ziens!")
+        sys.exit(0)
+    else:
+        print("Ongeldige keuze!")
+
+    input("\nDruk op Enter om terug te keren naar het menu...")
+
+if __name__ == "__main__":
+    while True:
+        main_menu()
